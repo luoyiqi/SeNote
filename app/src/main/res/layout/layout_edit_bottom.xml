@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/btn_camera"
+        android:src="@mipmap/ic_camera_alt_black_36dp"
+        android:background="@color/transparent"
+        android:layout_width="45dp"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/btn_local"
+        android:src="@mipmap/ic_image_black_36dp"
+        android:layout_toEndOf="@id/btn_camera"
+        android:background="@color/transparent"
+        android:layout_width="45dp"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn_record"
+        android:layout_toEndOf="@id/btn_local"
+        android:text="录音"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
