@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarTheme"/>
 
     <include
-        android:id="@+id/top_bar"
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        layout="@layout/layout_top_bar" />
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_edit_bottom" />
 
     <ScrollView
-        android:layout_below="@id/top_bar"
+        android:layout_below="@id/tool_bar"
         android:layout_above="@id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,25 +34,95 @@
                 android:id="@+id/tv_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:lines="6"
                 android:text="开始录制音频" />
-            <GridView
-                android:id="@+id/gridView"
+
+            <Button
+                android:id="@+id/btn_voice"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:cacheColorHint="@color/transparent"
-                android:numColumns="3"
-                android:verticalSpacing="1dp"
-                android:horizontalSpacing="1dp"
-                android:stretchMode="columnWidth"
-                android:gravity="center"
-                android:listSelector="@null" />
+                android:layout_height="wrap_content"
+                android:text="音频" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/tl_iv_1"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_2"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_3"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/tl_iv_4"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_5"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_6"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/tl_iv_7"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_8"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                    <ImageView
+                        android:id="@+id/tl_iv_9"
+                        android:background="@color/grey"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_margin="1dp"
+                        android:layout_height="120dp"/>
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
     </ScrollView>
 
-    <include
-        android:id="@+id/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        layout="@layout/layout_edit_bottom" />
 </RelativeLayout>
